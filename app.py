@@ -12,7 +12,7 @@ model = pickle.load(open("flight_fare_model.pkl", "rb"))
 @app.route("/")
 @cross_origin()
 def home():
-    return render_template("home_page.html")
+    return render_template("home.html")
 
 
 
@@ -332,7 +332,7 @@ def predict():
         return render_template('home.html',prediction_text="Your Flight price is Rs. {}".format(output))
 
 
-    return render_template("home_page.html")
+    return render_template("home.html")
 
 
 
