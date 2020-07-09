@@ -33,7 +33,7 @@ def predict():
         Dep_min = int(pd.to_datetime(date_dep, format ="%Y-%m-%dT%H:%M").minute)
         
 
-        # Arrival
+        """# Arrival
         date_arr = request.form["Arrival_Time"]
         Arrival_hour = int(pd.to_datetime(date_arr, format ="%Y-%m-%dT%H:%M").hour)
         Arrival_min = int(pd.to_datetime(date_arr, format ="%Y-%m-%dT%H:%M").minute)
@@ -42,7 +42,7 @@ def predict():
         # Duration
         dur_hour = abs(Arrival_hour - Dep_hour)
         dur_min = abs(Arrival_min - Dep_min)
-        
+        """
 
         # Total Stops
         Total_stops = int(request.form["stops"])
@@ -301,10 +301,6 @@ def predict():
             Journey_month,
             Dep_hour,
             Dep_min,
-            Arrival_hour,
-            Arrival_min,
-            dur_hour,
-            dur_min,
             Air_India,
             GoAir,
             IndiGo,
